@@ -1,5 +1,10 @@
-.classpath
-.project
-/bin
+#Maven build result directory
 /target
-.settings
+/bin
+#IntelliJ project files
+/.idea
+/*.iml
+#Eclipse project files
+/.settings
+/.classpath
+/.project
