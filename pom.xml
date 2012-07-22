@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.easytesting</groupId>
   <artifactId>fest-reflect</artifactId>
-  <version>2.0-SNAPSHOT</version>
+  <version>2.0-MODULARIZATION-SNAPSHOT</version>
   <name>FEST Reflection</name>
   <description>Fluent Interface that simplifies usage of Java Reflection</description>
   <inceptionYear>2007</inceptionYear>
@@ -13,7 +13,7 @@
   <parent>
     <groupId>org.easytesting</groupId>
     <artifactId>fest</artifactId>
-    <version>1.0.14</version>
+    <version>1.0.15-MODULARIZATION-SNAPSHOT</version>
   </parent>
   <mailingLists>
     <mailingList>
@@ -36,20 +36,16 @@
     <dependency>
       <groupId>org.easytesting</groupId>
       <artifactId>fest-util</artifactId>
-      <version>1.2.0</version>
-      <type>jar</type>
+      <version>1.2.2-MODULARIZATION-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
       <scope>test</scope>
-      <version>1.9.0</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.8.2</version>
-      <type>jar</type>
       <scope>test</scope>
     </dependency>
   </dependencies>

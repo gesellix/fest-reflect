@@ -16,6 +16,8 @@ package org.fest.reflect.test;
 
 import org.fest.reflect.exception.ReflectionError;
 import org.junit.rules.MethodRule;
+import org.junit.rules.TestRule;
+import org.junit.runner.Description;
 import org.junit.runners.model.*;
 
 /**
@@ -23,7 +25,7 @@ import org.junit.runners.model.*;
  * 
  * @author Alex Ruiz
  */
-public class ExpectedException implements MethodRule {
+public class ExpectedException implements MethodRule, TestRule {
 
   private final org.junit.rules.ExpectedException delegate = org.junit.rules.ExpectedException.none();
 
@@ -35,7 +37,12 @@ public class ExpectedException implements MethodRule {
 
   /** {@inheritDoc} */
   public Statement apply(Statement base, FrameworkMethod method, Object target) {
-    return delegate.apply(base, method, target);
+    return apply(base, null);
+  }
+
+  /** {@inheritDoc} */
+  public Statement apply(Statement base, Description description) {
+    return delegate.apply(base, description);
   }
 
   public void expectReflectionError(String message) {
